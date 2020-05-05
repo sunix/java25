@@ -1,0 +1,93 @@
+apiVersion: 1.0.0
+metadata:
+  generateName: java15-record-
+
+projects:
+  - name: record-preview-feature-java15
+    source:
+      location: 'https://github.com/sunix/record-preview-feature-java15.git'
+      type: git
+      branch: master
+
+components:
+
+  - reference: https://raw.githubusercontent.com/sunix/che-plugin-registry/java15/v3/plugins/redhat/java15/0.60.0/meta.yaml
+    type: chePlugin
+
+  - alias: git
+    type: dockerimage
+    image: sunix/git-devtools
+    mountSources: true
+    memoryLimit: 64M
+    args: ['sleep', 'infinity']
+
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:15-jdk'
+    alias: openjdk--15-jdk
+    
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:14-jdk'
+    alias: openjdk--14-jdk
+    
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:13-jdk'
+    alias: openjdk--13-jdk
+    
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:12-jdk'
+    alias: openjdk--12-jdk
+
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:11-jdk'
+    alias: openjdk--11-jdk
+
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:10-jdk'
+    alias: openjdk--10-jdk
+    
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:9-jdk'
+    alias: openjdk--9-jdk
+
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:8-jdk'
+    alias: openjdk--8-jdk
+    
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:7-jdk'
+    alias: openjdk--7-jdk
+
+commands:
+
+  - name: -- Build and Run
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; javac --enable-preview -source 15 *.java && java --enable-preview Main
