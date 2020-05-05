@@ -93,63 +93,63 @@ commands:
         command: set -o xtrace; javac --enable-preview -source 15 *.java && java --enable-preview Main
         component: openjdk--15-jdk
 
-  - name: java -version
+  - name: java -version                      15
     actions:
       - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
         type: exec
         command: set -o xtrace; java -version
         component: openjdk--15-jdk
 
-  - name: java -version
+  - name: java -version                      14
     actions:
       - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
         type: exec
         command: set -o xtrace; java -version
         component: openjdk--14-jdk
 
-  - name: java -version
+  - name: java -version                      13
     actions:
       - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
         type: exec
         command: set -o xtrace; java -version
         component: openjdk--13-jdk
 
-  - name: java -version
+  - name: java -version                      12
     actions:
       - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
         type: exec
         command: set -o xtrace; java -version
         component: openjdk--12-jdk
 
-  - name: java -version
+  - name: java -version                      11
     actions:
       - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
         type: exec
         command: set -o xtrace; java -version
         component: openjdk--11-jdk
 
-  - name: java -version
+  - name: java -version                      10
     actions:
       - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
         type: exec
         command: set -o xtrace; java -version
         component: openjdk--10-jdk
 
-  - name: java -version
+  - name: java -version                      9
     actions:
       - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
         type: exec
         command: set -o xtrace; java -version
         component: openjdk--9-jdk
 
-  - name: java -version
+  - name: java -version                      8
     actions:
       - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
         type: exec
         command: set -o xtrace; java -version
         component: openjdk--8-jdk
 
-  - name: java -version
+  - name: java -version                      7
     actions:
       - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
         type: exec
