@@ -92,3 +92,67 @@ commands:
         type: exec
         command: set -o xtrace; javac --enable-preview -source 15 *.java && java --enable-preview Main
         component: openjdk--15-jdk
+
+  - name: java -version
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--15-jdk
+
+  - name: java -version
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--14-jdk
+
+  - name: java -version
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--13-jdk
+
+  - name: java -version
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--12-jdk
+
+  - name: java -version
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--11-jdk
+
+  - name: java -version
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--10-jdk
+
+  - name: java -version
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--9-jdk
+
+  - name: java -version
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--8-jdk
+
+  - name: java -version
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--7-jdk
+
