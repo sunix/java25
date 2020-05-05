@@ -91,3 +91,4 @@ commands:
       - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
         type: exec
         command: set -o xtrace; javac --enable-preview -source 15 *.java && java --enable-preview Main
+        component: openjdk--15-jdk
