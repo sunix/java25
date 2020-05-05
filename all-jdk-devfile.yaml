@@ -1,6 +1,6 @@
 apiVersion: 1.0.0
 metadata:
-  generateName: java15-record-
+  generateName: all-jdk-
 
 projects:
   - name: record-preview-feature-java15
