@@ -88,21 +88,21 @@ commands:
 
   - name: -- Build and Run
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+      - workdir: '${CHE_PROJECTS_ROOT}/java25'
         type: exec
         command: set -o xtrace; javac --enable-preview -source 15 *.java && java --enable-preview Main
         component: openjdk--15-jdk
 
   - name: 'java -version (openjdk:15)'
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+      - workdir: '${CHE_PROJECTS_ROOT}/java25'
         type: exec
         command: set -o xtrace; java -version
         component: openjdk--15-jdk
 
   - name: 'java -version (openjdk:14)'
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+      - workdir: '${CHE_PROJECTS_ROOT}/java25'
         type: exec
         command: set -o xtrace; java -version
         component: openjdk--14-jdk
