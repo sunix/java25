@@ -137,21 +137,21 @@ commands:
 
   - name: 'java -version (openjdk:9)'
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+      - workdir: '${CHE_PROJECTS_ROOT}/java25'
         type: exec
         command: set -o xtrace; java -version
         component: openjdk--9-jdk
 
   - name: 'java -version (openjdk:8)'
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+      - workdir: '${CHE_PROJECTS_ROOT}/java25'
         type: exec
         command: set -o xtrace; java -version
         component: openjdk--8-jdk
 
   - name: 'java -version (openjdk:7)'
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+      - workdir: '${CHE_PROJECTS_ROOT}/java25'
         type: exec
         command: set -o xtrace; java -version
         component: openjdk--7-jdk
