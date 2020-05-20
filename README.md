@@ -1,5 +1,5 @@
-# record-preview-feature-java15
-Record Preview feature in Java15
+# Java 25
+Happy birthday!
 
 Code ... now!
-[https://che.openshift.io/factory?url=https://github.com/sunix/record-preview-feature-java15](https://bit.ly/che-java-record)
+[https://che.openshift.io/factory?url=https://github.com/sunix/java25](https://che.openshift.io/factory?url=https://github.com/sunix/java25)

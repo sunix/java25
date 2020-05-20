@@ -1,11 +1,11 @@
 apiVersion: 1.0.0
 metadata:
-  generateName: java15-record-
+  generateName: java25-
 
 projects:
-  - name: record-preview-feature-java15
+  - name: java25
     source:
-      location: 'https://github.com/sunix/record-preview-feature-java15.git'
+      location: 'https://github.com/sunix/java25.git'
       type: git
       branch: master
 
@@ -22,36 +22,69 @@ components:
     args: ['sleep', 'infinity']
 
   - mountSources: true
-    args:
-      - sleep
-      - infinity
-    memoryLimit: 1Gi
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
     type: dockerimage
     image: 'openjdk:15-jdk'
     alias: openjdk--15-jdk
-    env:
-      - value: >-
-          -XX:MaxRAMPercentage=50 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10
-          -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4
-          -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true
-          -Xms20m -Djava.security.egd=file:/dev/./urandom
-        name: JAVA_OPTS
+    
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:14-jdk'
+    alias: openjdk--14-jdk
+    
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:13-jdk'
+    alias: openjdk--13-jdk
+    
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:12-jdk'
+    alias: openjdk--12-jdk
+
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:11-jdk'
+    alias: openjdk--11-jdk
+
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:10-jdk'
+    alias: openjdk--10-jdk
+    
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:9-jdk'
+    alias: openjdk--9-jdk
+
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:8-jdk'
+    alias: openjdk--8-jdk
+    
+  - mountSources: true
+    args: ['sleep', 'infinity']
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'openjdk:7-jdk'
+    alias: openjdk--7-jdk
 
 commands:
-
-  - name: Build -- javac --enable-preview -source 15
-    actions: 
-      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
-        type: exec
-        command: set -o xtrace; javac --enable-preview -source 15 *.java
-        component: openjdk--15-jdk
-
-  - name: Run -- java --enable-preview Main
-    actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
-        type: exec
-        command: set -o xtrace; java --enable-preview Main
-        component: openjdk--15-jdk
 
   - name: -- Build and Run
     actions:
@@ -59,3 +92,67 @@ commands:
         type: exec
         command: set -o xtrace; javac --enable-preview -source 15 *.java && java --enable-preview Main
         component: openjdk--15-jdk
+
+  - name: 'java -version (openjdk:15)'
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--15-jdk
+
+  - name: 'java -version (openjdk:14)'
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--14-jdk
+
+  - name: 'java -version (openjdk:13)'
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--13-jdk
+
+  - name: 'java -version  (openjdk:12)'
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--12-jdk
+
+  - name: 'java -version (openjdk:11)'
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--11-jdk
+
+  - name: 'java -version (openjdk:10)'
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--10-jdk
+
+  - name: 'java -version (openjdk:9)'
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--9-jdk
+
+  - name: 'java -version (openjdk:8)'
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--8-jdk
+
+  - name: 'java -version (openjdk:7)'
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/record-preview-feature-java15'
+        type: exec
+        command: set -o xtrace; java -version
+        component: openjdk--7-jdk
+
